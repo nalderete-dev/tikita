@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Para mi Tikita💖</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="floating-hearts" aria-hidden="true"></div>
+    <header class="hero">
+  <div class="hero__content">
+    <p class="hero__eyebrow">Un rinconcito solo para nosotros</p>
+    <h1>Para mi Tikita 💖</h1>
+    <p class="hero__subtitle">
+      Eres mi presente favorito y mi futuro soñado.
+      <span class="pulse" aria-hidden="true">❤</span>
+    </p>
+
+    <div class="counter" aria-live="polite">
+      <p>Días juntos</p>
+      <p id="love-timer" style="margin-top:20px; font-size:1.2rem; text-align:center; color:#663366;">
+      </p>
+    </div>
+
+  </div>
+</header> <!-- ✔️ correcto -->
+
+
+    <main>
+      <section class="section" id="cartas">
+        <div class="section__header">
+          <h2>Cartitas de amor</h2>
+          <p>Pequeños mensajes para recordarte cuánto te amo.</p>
+        </div>
+        <div class="cards-grid" id="cards-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="section" id="historia">
+        <div class="section__header">
+          <h2>Nuestra historia</h2>
+          <p>Los hitos que construyeron nuestro universo.</p>
+        </div>
+        <ol class="timeline" id="timeline" aria-live="polite"></ol>
+      </section>
+
+      <section class="section" id="galeria">
+        <div class="section__header">
+          <h2>Galería</h2>
+          <p>Recuerdos que laten como corazones.</p>
+        </div>
+        <div class="gallery-grid" id="gallery-grid"></div>
+      </section>
+
+      <section class="section" id="carta-especial">
+        <div class="section__header">
+          <h2>Carta especial</h2>
+          <p>Un pedacito de mi corazón en palabras.</p>
+        </div>
+        <button class="btn" id="open-letter" type="button">
+          Abrir carta
+        </button>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Hecho con amor por Tikito</p>
+      <button class="btn" id="confetti-btn" type="button">
+        Lanzar confeti de corazones
+      </button>
+    </footer>
+
+    <div class="modal" id="gallery-modal" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="modal__backdrop" data-close="gallery"></div>
+
+      <div class="modal__content" role="document">
+        <button class="modal__close" type="button" data-close="gallery" aria-label="Cerrar">×</button>
+
+        <div class="modal__body">
+          <img class="modal__image" id="modal-image" alt="Foto" />
+          <p id="modal-caption"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="letter-modal" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="modal__backdrop" data-close="letter"></div>
+
+      <div class="modal__content modal__content--letter" role="document">
+        <button class="modal__close" type="button" data-close="letter" aria-label="Cerrar">×</button>
+
+        <div class="modal__body modal__body--scroll">
+          <article id="letter-content"></article>
+        </div>
+
+        <div class="modal__actions">
+          <button class="btn" id="copy-letter" type="button">Copiar carta</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="confetti-container" aria-hidden="true"></div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
